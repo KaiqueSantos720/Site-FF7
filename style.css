@@ -1,0 +1,657 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #334b44;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+}
+
+.headline{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    word-break: break-all;
+}
+
+.logo{
+    width: 7%;
+}
+
+#navbar{
+    width: 100%;
+    background: #334b44;
+    color: #344e52;
+    height: 80px;
+    position: fixed;
+    z-index: 10;
+}
+
+#navbar-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+#navbar-itens{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase; 
+}
+
+#navbar-itens li{
+    padding: 10px;
+}
+
+.barra{
+    width: 200px;
+    height: 25px;
+    border: 2px groove white;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.barra:hover{
+    background-color: #fff;
+    transition: all .4s;
+}
+
+.flex{
+    display: flex;
+    width: 210px;
+    margin: auto;
+    position: relative;
+    bottom: 15%;
+}
+
+.slides{
+    height: 100vh;
+}
+
+input{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: all .3s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: black;
+    margin: 8px;
+}
+
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+
+#navbar-itens.active{
+    transform: translateX(0);
+}
+
+#navbar-itens a:hover{
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+    color: white;
+    transition: all .3s;
+}
+
+
+
+
+
+.slide{
+    height: 100vh; /* Ocupa toda visÃ£o do usuÃ¡rio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 5px 2px 4px black;
+}
+
+#showcase{
+    background: url('imagens/Midgar.jpg') no-repeat center center/cover;
+    /* Overlay */
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: color;
+}
+
+#showcase2{
+    background: url('imagens/buster-sword.png') no-repeat center center/cover;
+    display: none;
+    width: 0vw;
+    float: right;
+    /* Overlay */
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: color;
+}
+
+#showcase3{
+    background: url('imagens/final-fantasy-7-remake-cloud-strife-uhdpaper.com-4K-17.jpg') no-repeat center center/cover;
+    display: none;
+    width: 0vw;
+    float: right;
+    /* Overlay */
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: color;
+}
+
+#showcase-container{
+    text-align: center;
+    max-width: 700px;
+}
+
+#showcase-container h2 {
+    font-size: 3rem;
+}
+
+
+#showcase-container p{
+    font-size: 1.3rem;
+    padding: 7px 0;
+}
+
+.show-a{
+    font-size: 3rem;
+    color: white;
+    transition: all .5s;
+}
+
+.show-a:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+    color: #334b44;
+}
+
+
+
+#sobre-jogo{
+    width: 100%;
+    background: #334b44;
+    color: black;
+    padding: 50px;
+}
+
+#plataformas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas que ocupa 1 fraÃ§Ã£o da div total */
+    justify-items: center;
+    padding: 15px;
+}
+
+.plat{
+    display: inline-block;
+    width: 50%;
+}
+
+#visao{
+    width: 100%;
+    background:#3686cd;
+    color: #495d79;
+    padding: 50px;
+    background: url('imagens/buster-sword-wallpaper.webp') no-repeat center center/cover;
+    background-color: rgba(0,0,0,0.6);
+    background-blend-mode: color;
+}
+
+#visao-container{
+    width: 70%;
+    margin: auto;
+    float: right;
+    display: flex;
+    border-radius: 10px;
+    border: 5px solid #000;
+}
+
+.sobre{
+    display: flex;
+    background:transparent;
+    color: #495d79;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.sobre p{
+    font-size: 1.8rem;
+    margin: auto;
+    text-align: justify;
+    display: flex;
+}
+
+.sobre-titulo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre h1{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.personagem{
+    display: flex;
+    margin: auto;
+    width: 75%;
+}
+
+.roster{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    float: left;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.image{
+    width: 90%;
+    border: 4px solid transparent;
+    transition: all .5s;
+}
+
+.image:hover{
+    cursor: pointer;
+    border: 4px solid #1e3b55;
+    border-radius: 50%;
+    transform: scale(1.1);
+    background: #334b44;
+}
+
+.inline{
+    width: 30%;
+    display: inline-block;
+}
+
+.fig{
+    width: 50%;
+    margin: auto;
+}
+
+.text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#aer, #nero, #roche, #barret, #tifa, #xiii, #jessie, #biggs, #wedge, #yuffie, #sonon, #corneo, #shinra, #heidegger, #scarlet, #palmer, #rude, #reno, #tseng, #rufus, #hojo, #weiss, #sephiroth{
+    display: none;
+}
+
+
+#galeria{
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+    background: #1e3b55;
+    color: black;
+    background: url('imagens/ff7r-cover-nologo-3840x2160-1.jpg') no-repeat center center/cover;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: color;
+}
+
+#galeria-container{
+    display: flex;
+    justify-content: center;
+}
+
+.galeria-imagens{
+    display: inline-block;
+    width: 1280px;
+    height: 720px;
+    border-radius: 5px;
+}
+
+#img2, #img3, #img4, #img5, #img6, #img7, #img8, #img9, #img10{
+    display: none;
+} 
+
+.seta{
+    width: 7%;
+    height: 7%;
+    margin: auto;
+    transition: all .5s;
+}
+
+.seta:hover{
+    transform: scale(1.2);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    width: 24%;
+    margin: auto;
+}
+
+#produto{
+    width: 100%;
+    padding: 50px;
+    background: #1e3b55;
+    color: royalblue;
+    background: url('imagens/cloud.webp') no-repeat center center/cover;
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: color;
+}
+
+#produto-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#itens{
+    width: 650px;
+}
+
+#itens .item{
+    display: flex;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.item i{
+    padding: 10px;
+}
+
+.meteoro{
+    width: 20%;
+}
+
+.dev{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    background: transparent;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+#devs{
+    width: 100%;
+    background: #334b44;
+    padding: 50px;
+    color: black;
+    border-top: 10px groove black;
+}
+
+#devs-container{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dev .dev-image{
+    width: 50%;
+    margin: 15px;
+}
+
+#sobre-pox, #personagem-pox, #dev-pox, #plataforma-pox, #img-pox{
+    position: relative;
+    bottom: 4.9rem;
+}
+
+#footer{
+    background: #334b44;
+    color: black;
+    padding: 30px;
+    text-align: center;
+}
+
+@keyframes linkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+  
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+  
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+#figxiii:hover{
+    border-color: #b55f41;
+    background-color: #63332a;
+}
+
+#figcloud:hover{
+    border-color: #495d79;
+    background-color: #000;
+}
+
+#figaerith:hover{
+    border-color: red;
+    background-color: white;
+}
+
+#figbarret:hover{
+    border-color: #573624;
+    background-color: #676951;
+}
+
+#figtifa:hover{
+    border-color: #fff;
+    background-color: #000;
+}
+
+#fignero:hover{
+    border-color: #2c3049;
+    background-color: #455070;
+}
+
+#figroche:hover{
+    border-color: #C33535;
+    background-color: #729fa8;
+}
+
+#figjessie:hover{
+    border-color: #8e252c;
+    background-color: #3b3c51;
+}
+
+#figbiggs:hover{
+    border-color: #9f2228;
+    background-color: #4f583c;
+}
+
+#figwedge:hover{
+    border-color: #9d2028;
+    background-color: #dbcdb0;
+}
+
+#figyuffie:hover{
+    border-color: #51582e;
+    background-color: #000;
+}
+
+#figsonon:hover{
+    border-color: #a33f32;
+    background-color: #898f98;
+}
+
+#figcorneo:hover{
+    border-color: #8a1f22;
+    background-color: #c62f5e;
+}
+
+#figshinra:hover{
+    border-color: #251a28;
+    background-color: darkkhaki;
+}
+
+#figheidegger:hover{
+    border-color: #3b6764;
+    background-color: #3e1d24;
+}
+
+#figscarlet:hover{
+    border-color: #722d2f;
+    background-color: #ab3c40;
+}
+
+#figpalmer:hover{
+    border-color: #8a541d;
+    background-color: #d2ab67;
+}
+
+#figrude:hover{
+    border-color: #523925;
+    background-color: #000;
+}
+
+#figreno:hover{
+    border-color: firebrick;
+    background-color: #000;
+}
+
+#figtseng:hover{
+    border-color: #595855;
+    background-color: #000;
+}
+
+#figrufus:hover{
+    border-color: #adacac;
+    background-color: #fff;
+}
+
+#fighojo:hover{
+    border-color: #37989e;
+    background-color: #fff;
+}
+
+#figweiss:hover{
+    border-color: #fff;
+    background-color: #3c6c84;
+}
+
+#figsephiroth:hover{
+    border-color: white;
+    background-color: grey;
+}
+
+#sl1:hover{
+    background: url("imagens/Midgar.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sl2:hover{
+    background: url("imagens/buster-sword.png") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sl3:hover{
+    background: url("imagens/final-fantasy-7-remake-cloud-strife-uhdpaper.com-4K-17.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sld1:hover{
+    background: url("imagens/slides/slide1.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sld2:hover{
+    background: url("imagens/slides/slide2.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sld3:hover{
+    background: url("imagens/slides/slide3.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sld4:hover{
+    background: url("imagens/slides/slide4.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sld5:hover{
+    background: url("imagens/slides/slide5.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sld6:hover{
+    background: url("imagens/slides/slide6.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sld7:hover{
+    background: url("imagens/slides/slide7.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sld8:hover{
+    background: url("imagens/slides/slide8.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sld9:hover{
+    background: url("imagens/slides/slide9.jpg") no-repeat center center/cover;
+    transition: all .4s;
+}
+
+#sld10:hover{
+    background: url("imagens/slides/slide10.jpg") no-repeat center center/cover;
+    transition: all .4s;  
+}
